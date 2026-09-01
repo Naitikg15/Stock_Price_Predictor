@@ -51,6 +51,7 @@ def calculate_features(df: pd.DataFrame) -> pd.DataFrame:
     df['Target_Direction'] = (df['Target_Return'] > 0).astype(int)
 
     # Drop warm-up rows (first ~50 days) and the final row without a target
+    df = df.replace([np.inf, -np.inf], np.nan)
     df = df.dropna()
 
 
