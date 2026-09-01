@@ -1,0 +1,10 @@
+.venv/
+__pycache__/
+*.py[cod]
+.ipynb_checkpoints/
+data/
+models/*.keras
+models/*.joblib
+.env
+Stock_Price_Prediction_Project_Brief.docx
+generate_brief.py
