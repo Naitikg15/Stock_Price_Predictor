@@ -12,7 +12,7 @@ def calculate_features(df: pd.DataFrame) -> pd.DataFrame:
     df['OC_Spread'] = (df['Close'] - df['Open'])/df['Open']
     df['Volume_ROC'] = df['Volume'].pct_change()
 
-    # Trend Indicators? Average Ratios
+    # Trend Indicators & Average Ratios
     
     # SMA (20 Day Simple Moving Average)
     df['SMA_20'] = df['Adj Close'].rolling(window=20).mean()
