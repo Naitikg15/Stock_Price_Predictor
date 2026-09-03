@@ -128,12 +128,17 @@ def simulate_trading_strategy(
 
 if __name__ == "__main__":
     import os
+    import argparse
     import tensorflow as tf
     from data_loader import fetch_data
     from features import calculate_features
     from preprocess import chronological_split, fit_and_transform_scalers, create_sliding_windows
     
-    ticker = "^NSEI"
+    parser = argparse.ArgumentParser(description="Evaluate Model on any stock")
+    parser.add_argument("--ticker", type=str, default="^NSEI", help="Stock ticker symbol")
+    args = parser.parse_args()
+    
+    ticker = args.ticker
     clean_ticker = ticker.replace("^", "").replace(".", "_")
     
     # 1. Ingest Data & Prepare Out-of-Sample Test Set
