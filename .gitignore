@@ -4,10 +4,7 @@ __pycache__/
 *.py[cod]
 *$py.class
 .ipynb_checkpoints/
-models/*.keras
-models/*.joblib
 .env
-Stock_Price_Prediction_Project_Brief.docx
 generate_brief.py
 server/node_modules/
 node_modules/
